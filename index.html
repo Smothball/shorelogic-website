@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Shore Logic Advisors | AI Enablement for Small Business</title>
+  <meta name="description" content="Shore Logic Advisors helps small businesses, skilled trades, and creative professionals use AI to reclaim their time and grow — without losing what makes their work human. Based in Monmouth County, NJ." />
+  <meta name="keywords" content="AI consulting, AI enablement, small business AI, Monmouth County NJ, AI advisory, AI strategy, local AI advisor, AI for small business, business automation" />
+  <link rel="canonical" href="https://shorelogic.ai/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Shore Logic Advisors | AI Enablement for Small Business" />
+  <meta property="og:description" content="Shore Logic helps small businesses use AI to reclaim their time and grow — without losing what makes their work human. Expert guidance, practical results." />
+  <meta property="og:image" content="assets/thumbnail.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shorelogic.ai/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shore Logic Advisors | AI Enablement for Small Business" />
+  <meta name="twitter:description" content="Shore Logic helps small businesses use AI to reclaim their time and grow — without losing what makes their work human." />
+  <meta name="twitter:image" content="assets/thumbnail.png" />
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Shore Logic AI Advisors",
+    "email": "smothes@shorelogic.ai",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "NJ",
+      "addressCountry": "US"
+    },
+    "areaServed": "Monmouth County, NJ",
+    "url": "https://shorelogic.ai",
+    "description": "AI Enablement & Advisory firm helping small businesses, skilled trades, and creative professionals use AI to grow without breaking their budget or infrastructure.",
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:  #12263F;
+      --cream: #F3EFE9;
+      --silver-light: #D0D5DD;
+      --silver-mid:   #8A95A5;
+      --white: #FFFFFF;
+      --radius-card: 12px;
+      --radius-btn:  8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--navy);
+      background: var(--cream);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Arvo', Georgia, serif;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Layout Helpers ── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--silver-light);
+      margin: 0;
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: var(--radius-btn);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .btn:hover { background: #1a3a5c; }
+
+    /* ── Nav ── */
+    nav {
+      background: var(--navy);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav img {
+      height: 40px;
+      width: auto;
+    }
+    nav a.nav-cta {
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 500;
+      border: 1px solid var(--silver-light);
+      padding: 8px 20px;
+      border-radius: var(--radius-btn);
+      transition: background 0.2s;
+    }
+    nav a.nav-cta:hover { background: rgba(255,255,255,0.1); }
+
+    /* ── Hero ── */
+    #hero {
+      background: var(--cream);
+      padding: 80px 0 70px;
+      text-align: center;
+    }
+    #hero .hero-logo {
+      height: 90px;
+      width: auto;
+      margin: 0 auto 36px;
+    }
+    #hero h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    #hero .subheader {
+      font-size: 18px;
+      color: var(--silver-mid);
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+
+    /* ── Services ── */
+    #services { background: var(--white); }
+    #services .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--silver-mid);
+      margin-bottom: 12px;
+    }
+    #services h2 { font-size: 32px; margin-bottom: 48px; }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .card {
+      background: var(--cream);
+      border: 1px solid var(--silver-light);
+      border-radius: var(--radius-card);
+      padding: 32px 28px;
+    }
+    .card-number {
+      font-family: 'Arvo', serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--silver-mid);
+      margin-bottom: 12px;
+    }
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 15px;
+      color: #4a5568;
+    }
+
+    /* ── Why Shore Logic ── */
+    #why { background: var(--cream); }
+    #why h2 { font-size: 32px; margin-bottom: 48px; }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .pillar {
+      border-top: 2px solid var(--silver-light);
+      padding-top: 24px;
+    }
+    .pillar h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    .pillar p {
+      font-size: 15px;
+      color: #4a5568;
+    }
+
+    /* ── About ── */
+    #about { background: var(--white); }
+    #about h2 { font-size: 32px; margin-bottom: 32px; }
+    .about-quote {
+      border-left: 4px solid var(--silver-light);
+      padding-left: 28px;
+      max-width: 800px;
+    }
+    .about-quote p {
+      font-size: 16px;
+      color: #2d3748;
+      margin-bottom: 20px;
+    }
+    .about-quote p:last-child { margin-bottom: 0; }
+
+    /* ── Contact ── */
+    #contact { background: var(--cream); }
+    #contact h2 { font-size: 32px; margin-bottom: 12px; }
+    #contact .subheader {
+      font-size: 16px;
+      color: var(--silver-mid);
+      margin-bottom: 40px;
+      max-width: 560px;
+    }
+
+    .contact-form {
+      max-width: 620px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group.full { grid-column: 1 / -1; }
+
+    label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    label .optional {
+      font-weight: 400;
+      color: var(--silver-mid);
+      font-size: 13px;
+    }
+    input, textarea {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: var(--navy);
+      background: var(--white);
+      border: 1px solid var(--silver-light);
+      border-radius: 6px;
+      padding: 12px 14px;
+      width: 100%;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    input:focus, textarea:focus { border-color: var(--navy); }
+    textarea { resize: vertical; min-height: 120px; }
+
+    #form-status {
+      margin-top: 16px;
+      font-size: 15px;
+      font-weight: 500;
+      min-height: 24px;
+    }
+    #form-status.success { color: #276749; }
+    #form-status.error   { color: #c0392b; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--navy);
+      color: var(--white);
+      padding: 40px 0;
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+    footer img { height: 36px; width: auto; }
+    .footer-contact {
+      font-size: 14px;
+      color: var(--silver-light);
+    }
+    .footer-contact a { color: var(--silver-light); text-decoration: underline; }
+    .footer-location { font-size: 14px; color: var(--silver-mid); }
+    .footer-copy { font-size: 13px; color: var(--silver-mid); margin-top: 8px; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      #hero h1 { font-size: 34px; }
+      #hero .subheader { font-size: 16px; }
+
+      .cards-grid { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: auto; }
+
+      nav img { height: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="container">
+      <img src="assets/svg/logo-lockup-navy.svg" alt="Shore Logic Advisors" />
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="container">
+      <img src="assets/svg/logo-lockup-transparent.svg" alt="Shore Logic Advisors" class="hero-logo" />
+      <h1>Master your craft, automate the rest.</h1>
+      <p class="subheader">AI Enablement &amp; Advisory for small businesses, skilled trades, and creative professionals ready to grow smarter — not harder.</p>
+      <a href="#contact" class="btn">Explore How We Help</a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <p class="section-label">How We Work Together</p>
+      <h2>Your AI Journey, Step by Step</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <p class="card-number">PHASE 01</p>
+          <h3>AI Readiness Evaluation</h3>
+          <p>Assess where you stand, what opportunities exist, and identify the gaps and risks specific to your business — before committing to anything.</p>
+        </div>
+        <div class="card">
+          <p class="card-number">PHASE 02</p>
+          <h3>Design Your AI-Enabled Future</h3>
+          <p>Co-create a vision for what your business looks like with the right AI in place. A customized roadmap with clear priorities, realistic timelines, and no vendor lock-in.</p>
+        </div>
+        <div class="card">
+          <p class="card-number">PHASE 03</p>
+          <h3>Craft the Vision Into Reality</h3>
+          <p>Hands-on implementation, team training, and process refinement — turning your roadmap into running workflows your people actually use and trust.</p>
+        </div>
+        <div class="card">
+          <p class="card-number">PHASE 04</p>
+          <h3>AI Augmentation Partnership</h3>
+          <p>Ongoing optimization, governance, and scaling as your business evolves. We stay at the table as your technology landscape changes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Why Shore Logic -->
+  <section id="why">
+    <div class="container">
+      <h2>Why Shore Logic</h2>
+      <div class="pillars-grid">
+        <div class="pillar">
+          <h3>Guided Navigation</h3>
+          <p>We point the way. We do not drop complex tools on our clients and leave — we chart a clear path from start to finish and walk it with you.</p>
+        </div>
+        <div class="pillar">
+          <h3>Symphonic Augmentation</h3>
+          <p>We believe AI should harmonize with human labor, not replace it. We build systems that enhance the existing talent of your team.</p>
+        </div>
+        <div class="pillar">
+          <h3>Approachable Sophistication</h3>
+          <p>High-tech capability with down-to-earth partnership. No unnecessary jargon — just practical guidance that makes sense for your business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>Why Shore Logic Exists</h2>
+      <div class="about-quote">
+        <p>We're living through one of the most significant shifts in the history of business. AI isn't a future technology — it's available right now, and the businesses that learn to use it well are going to operate faster, smarter, and leaner than those that don't. That window of advantage is open today.</p>
+        <p>The challenge is that most of the guidance out there is aimed at enterprises with deep pockets and dedicated IT teams. Small businesses, tradespeople, and independent professionals get left behind — or worse, sold tools they don't need and can't use.</p>
+        <p>Shore Logic exists to close that gap. I spent nearly 15 years in finance and equity compensation — process-heavy, risk-conscious, highly regulated work. When AI arrived, I saw firsthand how it could transform operations without requiring a massive budget or a technical team. Tasks that once demanded engineering resources could be handled by the people who actually knew the work best, in a fraction of the time.</p>
+        <p>That's the model we bring to every client: practical AI that fits your business, your budget, and the way your team actually works. No hype. No bloated implementations. Just clear, honest guidance — and a partner who stays at the table until it's working.</p>
+        <p><strong>— Stephen Mothes, Founder</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Let's Talk About Your AI Strategy</h2>
+      <p class="subheader">Share a bit about your business and what brings you here. We'll be in touch within 1–2 business days.</p>
+
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name <span style="color:#c0392b">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="Jane Smith" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span style="color:#c0392b">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="jane@yourbusiness.com" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="company">Company Name <span style="color:#c0392b">*</span></label>
+            <input type="text" id="company" name="company" required placeholder="Your Business Name" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone <span class="optional">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(732) 555-0100" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">What brings you here? <span style="color:#c0392b">*</span></label>
+          <textarea id="message" name="message" required placeholder="Tell us a bit about your business and what you're hoping AI can help with..."></textarea>
+        </div>
+        <button type="submit" class="btn" id="submit-btn">Send Message</button>
+        <p id="form-status" role="alert"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <img src="assets/svg/logo-lockup-navy.svg" alt="Shore Logic Advisors" />
+        <p class="footer-contact">
+          <a href="mailto:smothes@shorelogic.ai">smothes@shorelogic.ai</a>
+        </p>
+        <p class="footer-location">Proudly innovating in Monmouth County, NJ</p>
+        <p class="footer-copy">© 2026 Shore Logic Advisors LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
+
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      status.textContent = '';
+      status.className = '';
+
+      const name    = document.getElementById('name').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !company || !message) {
+        status.textContent = 'Please fill in all required fields.';
+        status.className = 'error';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      const payload = {
+        name,
+        email,
+        company,
+        phone: document.getElementById('phone').value.trim(),
+        message
+      };
+
+      try {
+        const res = await fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.result === 'success') {
+          status.textContent = 'Thank you! We\'ll be in touch within 1–2 business days.';
+          status.className = 'success';
+          form.reset();
+        } else {
+          throw new Error(data.error || 'Unknown error');
+        }
+      } catch (err) {
+        status.textContent = 'Something went wrong. Please email us directly at smothes@shorelogic.ai.';
+        status.className = 'error';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
+    });
+  </script>
+
+</body>
+</html>
