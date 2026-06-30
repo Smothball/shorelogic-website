@@ -277,6 +277,21 @@ nav a.nav-cta:hover { background: rgba(255,255,255,0.1); }
 }
 .founder-quote p:last-child { margin-bottom: 0; }
 
+.story-image {
+  width: 100%;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--silver-light);
+  margin: 28px 0;
+  display: block;
+}
+.story-image-caption {
+  font-size: 13px;
+  color: var(--silver-mid);
+  margin-top: -16px;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
 .serve-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
